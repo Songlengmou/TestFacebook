@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="5dp"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:retryImage="@mipmap/ic_launcher"
+        fresco:retryImageScaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintTop_toBottomOf="@id/sdv"
+        fresco:retryImage="@mipmap/ic_launcher"
+        fresco:retryImageScaleType="centerCrop"
+        tools:ignore="MissingConstraints" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        fresco:failureImage="@mipmap/ic_launcher"
+        fresco:layout_constraintTop_toBottomOf="@id/sdv1"
+        fresco:retryImage="@mipmap/ic_launcher"
+        fresco:retryImageScaleType="centerCrop"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundWithOverlayColor="#ff00"
+        fresco:roundedCornerRadius="20dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
